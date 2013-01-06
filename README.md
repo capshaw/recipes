@@ -1,6 +1,8 @@
 # A Recipe Server
 ### A toy python server for hosting and serving recipes
 
+This is a simple (toy) python server for hosting recipes. Pages are compiled upon request via JSON and embedded into templates with Jinja.
+
 ## To Use
 
 Simply run `server.py`. You'll probably need root credentials.
