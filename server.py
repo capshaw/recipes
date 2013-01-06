@@ -46,6 +46,20 @@ class RequestHandler(BaseHTTPRequestHandler):
                 f.close()
                 return
 
+            # TODO: refactor all of this to be based on path, not just file ending
+
+            #
+            # Handle static json requests for recipes
+            #
+            if self.path.endswith('.json'):
+                f = open(curdir + sep + 'recipes' + sep + self.path)
+
+                self.send_200_response_headers('text/json')
+
+                self.wfile.write(f.read())
+                f.close()
+                return
+
             #
             # Handle generic requests for the index page
             #
