@@ -97,7 +97,7 @@ class RequestHandler(BaseHTTPRequestHandler):
             self.send_200_response_headers('text/html')
             page_content = env.get_template('recipe.html')
             page_content = page_content.render(recipe = recipe)
-            self.render_main_template(env, page_content, "Recipe:" + recipe['title'])
+            self.render_main_template(env, page_content, "Recipe: " + recipe['title'])
 
         except IOError:
             ''' A generic IO error means the file does not exist. '''
