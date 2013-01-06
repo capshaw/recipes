@@ -1,0 +1,18 @@
+<h2>{{ recipe.title }}</h2>
+<p class='lead'>{{ recipe.short_description }}</p>
+
+<h3>Ingredients</h3>
+<ul>
+{% for i in recipe.ingredients %}
+  <li>{{ i }}</li>
+{% endfor %}
+</ul>
+
+<h3>Steps</h3>
+<ol>
+{% for step in recipe.steps %}
+  <li>{{ step }}</li>
+{% endfor %}
+</ol>
+
+<a href='/'>Go Back</a>
