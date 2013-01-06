@@ -1,18 +1,24 @@
-<h2>{{ recipe.title }}</h2>
+<div class='row'>
+    <p class='lead'>A Collection of Recipes</p>
+    <ul class="breadcrumb">
+      <li><a href="/">Home</a> <span class="divider">/</span></li>
+      <li class="active">{{ recipe.title }}</li>
+    </ul>
+</div>
+
+<h3>{{ recipe.title }}</h3>
 <p class='lead'>{{ recipe.short_description }}</p>
 
-<h3>Ingredients</h3>
+<h4>Ingredients</h4>
 <ul>
 {% for i in recipe.ingredients %}
   <li>{{ i }}</li>
 {% endfor %}
 </ul>
 
-<h3>Steps</h3>
+<h4>Steps</h4>
 <ol>
 {% for step in recipe.steps %}
   <li>{{ step }}</li>
 {% endfor %}
 </ol>
-
-<a href='/'>Go Back</a>
