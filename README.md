@@ -7,7 +7,7 @@ This is a simple (toy) python server for hosting recipes. Pages are compiled upo
 
 ## To Use
 
-Simply run `server.py`. You'll probably need root credentials.
+Simply run `server.py`. You'll probably need root credentials. Visit `localhost` with your browser of choice to see a list of recipes.
 
 ## To Add Recipes
 
